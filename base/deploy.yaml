@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testflask
+spec:
+  selector:
+    matchLabels:
+      data: flask
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        data: flask
+    spec:
+      containers:
+      - name: testflsk
+        image: docker.jointree.co.kr/jointree/jointestflask
+        securityContext:
+         privileged: true
+        ports:
+        - containerPort: 8082
+        imagePullSecrets:
+         - name: docker-registry-login
