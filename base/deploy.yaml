@@ -18,6 +18,6 @@ spec:
         securityContext:
          privileged: true
         ports:
-        - containerPort: 8082
+        - containerPort: 80
       imagePullSecrets:
        - name: docker-registry-login
