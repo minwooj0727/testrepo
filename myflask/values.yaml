@@ -1,0 +1,4 @@
+service:
+  name: Node
+  type: NodePort
+  nodePort: 32222
