@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: svc_firefox
+  name: svc-firefox
   labels:
-    type: svc_tools
-    app: svc_firefox
+    type: svc-tools
+    app: svc-firefox
 spec:
   ports:
     - name: filezilla
