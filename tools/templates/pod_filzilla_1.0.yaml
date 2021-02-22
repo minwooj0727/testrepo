@@ -1,0 +1,19 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: filezilla
+  labels:
+    type: tools
+    app: filezilla
+spec:
+  containers:
+    - name: filezilla
+      image: docker.jointree.co.kr/jointree/joinfilezila:v1.2
+      imagePullPolicy: IfNotPresent
+      ports:
+      - containerPort: 5800
+      securityContext:
+        privileged: true
+  restartPolicy: Always
+  imagePullSecrets:
+  - name: docker-registry-login

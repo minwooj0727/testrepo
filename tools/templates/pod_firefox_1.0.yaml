@@ -1,0 +1,19 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: firefox
+  labels:
+    type: tools
+    app: firefox
+spec:
+  containers:
+    - name: filezilla
+      image: docker.jointree.co.kr/jointree/joinfirefox:v1.0
+      imagePullPolicy: IfNotPresent
+      ports:
+      - containerPort: 5800
+      securityContext:
+        privileged: true
+  restartPolicy: Always
+  imagePullSecrets:
+  - name: docker-registry-login

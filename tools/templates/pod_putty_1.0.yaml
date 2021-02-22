@@ -1,0 +1,19 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: putty
+  labels:
+    type: tools
+    app: putty
+spec:
+  containers:
+    - name: filezilla
+      image: docker.jointree.co.kr/jointree/joinputty:v1.0
+      imagePullPolicy: IfNotPresent
+      ports:
+      - containerPort: 5800
+      securityContext:
+        privileged: true
+  restartPolicy: Always
+  imagePullSecrets:
+  - name: docker-registry-login

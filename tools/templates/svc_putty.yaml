@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: svc_putty
+  labels:
+    type: svc_tools
+    app: svc_putty
+spec:
+  ports:
+    - name: putty
+      protocol: TCP
+      port: 5800
+      targetPort: 5800
+      nodePort: 30125
+  selector:
+    type: tools
+    app: putty
+  type: NodePort
