@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: svc_filezilla
+  name: svc-filezilla
   labels:
-    type: svc_tools
-    app: svc_filezilla
+    type: svc-tools
+    app: svc-filezilla
 spec:
   ports:
     - name: filezilla
