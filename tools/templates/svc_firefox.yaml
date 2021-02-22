@@ -11,7 +11,7 @@ spec:
       protocol: TCP
       port: 5800
       targetPort: 5800
-      nodePort: 33126
+      nodePort: 32126
   selector:
     type: tools
     app: firefox
