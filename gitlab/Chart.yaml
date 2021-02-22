@@ -1,0 +1,5 @@
+apiversion: v1
+description: GitLapSetting
+name: gitlap
+type: application
+version: 1.0.0

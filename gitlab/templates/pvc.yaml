@@ -1,0 +1,32 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: "{{.values.pv.name}}-pvc-config"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 40Gi 
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: "{{.values.pv.name}}-pvc-data"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 40Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: "{{.values.pv.name}}-pvc-log"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 40Gi

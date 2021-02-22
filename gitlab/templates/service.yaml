@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: "svc-{{.Chart.Name}}"
+ labels:
+  app: gitlab
+spec:
+ type: {{.values.service.type}}
+ ports:
+ - name: web
+   targetPort: {{.values.service.ports.web}}
+   port: {{.values.service.ports.web}}
+ - name: ssh
+   tartgetPort: {{.values.service.ports.ssh}}
+   port: {{.values.service.ports.ssh}}
+ - name: ssl
+   targetPort: {{.values.service.ports.ssl}}
+   port: {{.values.service.ports.ssl}}

@@ -1,0 +1,44 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: "{{.values.pv.name}}-log"
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: {{.values.pv.log}}
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: "{{.values.pv.name}}-config"
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: {{.values.pv.config}}
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: "{{.values.pv.name}}-data"
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: {{.values.pv.data}}
