@@ -1,5 +1,5 @@
 apiversion: v1
 description: GitLapSetting
-name: gitlap
+name: gitlaphelm
 type: application
 version: 1.0.0
