@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: svc_putty
+  name: svc-putty
   labels:
-    type: svc_tools
-    app: svc_putty
+    type: svc-tools
+    app: svc-putty
 spec:
   ports:
     - name: putty
